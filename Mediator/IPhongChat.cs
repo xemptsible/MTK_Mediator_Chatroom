@@ -8,7 +8,8 @@ using System.Windows.Forms;
 namespace MediatorPattern
 {
     /*
-     * Triển khai mẫu Mediator với một interface
+     * Triển khai mẫu Mediator 
+     * với một giai diện khai báo những phương thức cần thiết để giao tiếp với các Components/Colleagues
      */
     public interface IPhongChat
     {

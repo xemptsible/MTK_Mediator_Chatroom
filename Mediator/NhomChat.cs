@@ -13,13 +13,6 @@ namespace MediatorPattern
         private List<User> _users = new List<User>();
         public void DangKy(User user)
         {
-            /*
-             Gán phòng chat với người dùng khi sử dụng phương thức DangKy
-             user.ChatRoom = this;
-
-             Có thể gán thay trong lớp User trong khởi tạo nếu có nhiều PhongChat được triển khai ngoài NhomChat
-            */
-
             _users.Add(user);
         }
 
