@@ -32,9 +32,9 @@ namespace MediatorPattern
             ChatRoom.GuiNhanTin(Username, message);
         }
 
-        public virtual void Notify(string from, string message)
+        public virtual void Notify(string user, string message)
         {
-            Debug.WriteLine($"{Username} sent {message} from {ChatRoom}");
+            Debug.WriteLine($"{Username} nhận {message} trong {ChatRoom} từ {user}");
         }
     }
 }

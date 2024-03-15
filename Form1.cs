@@ -33,10 +33,6 @@ namespace MediatorPattern
             {
                 GuiNhanTin(rtb_message.Text, nguoiDung);
                 rtb_message.Clear();
-                foreach (User u in cacNguoiDung)
-                {
-                    Debug.WriteLine(u.Username + " " + u.ChatRoom);
-                }
             }
             else return;
         }
@@ -74,6 +70,7 @@ namespace MediatorPattern
                         list_users.Items.RemoveAt(i);
                         list_messages.Items.Add($"{nguoiDung.Username} has left the chatroom.");
                         cacNguoiDung.Remove(cacNguoiDung[i]);
+                        tb_username.Text = "";
                     }
                 }
                 nguoiDung = null;
@@ -149,6 +146,7 @@ namespace MediatorPattern
             nguoiDung = (ThanhVien)cacNguoiDung[index];
             //list_messages.Items.Add($"Switched to {nguoiDung.Username}.");
             Debug.WriteLine($"Selected another user as {nguoiDung.Username}.");
+            tb_username.Text = nguoiDung.Username;
         }
     }
 }
