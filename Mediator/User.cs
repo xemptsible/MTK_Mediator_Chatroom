@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MediatorPattern
 {
-    // Lớp 
+    // Lớp trừu tượng tạo những giá trị và hoạt động cần thiết để giao tiếp với ConcreteMediator
     public abstract class User
     {
         public string Username { get; }

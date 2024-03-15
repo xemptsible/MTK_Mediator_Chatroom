@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MediatorPattern.Mediator
 {
-    // Triển khai lớp bê tông/cứng (Concrete class) với những phương pháp kế thừa từ lớp trừu tượng
+    // Những lớp Components/ConcreteColleagues dùng để giao tiếp
     public class ThanhVien : User
     {
 

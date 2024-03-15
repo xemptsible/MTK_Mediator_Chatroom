@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace MediatorPattern
 {
+    // Mediator cứng (ConcreteMediator) triển khai những hoạt động yêu cầu từ giao diện IPhongChat (Mediator)
     internal class NhomChat : IPhongChat
     {
         private List<User> _users = new List<User>();
