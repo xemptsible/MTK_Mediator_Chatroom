@@ -54,10 +54,10 @@
     </Compile>
     <Compile Include="Mediator\NhomChat.cs" />
     <Compile Include="Mediator\IPhongChat.cs" />
-    <Compile Include="Mediator\User.cs" />
+    <Compile Include="Mediator\ThanhVien.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Mediator\IUser.cs" />
+    <Compile Include="Mediator\User.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

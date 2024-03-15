@@ -9,23 +9,28 @@ namespace MediatorPattern
 {
     internal class NhomChat : IPhongChat
     {
-        private List<IUser> _users = new List<IUser>();
-        public void Register(IUser user)
+        private List<User> _users = new List<User>();
+        public void DangKy(User user)
         {
-            //If user hasn't joined this chatroom yet
-            user.ChatRoom = this;
+            /*
+             Gán phòng chat với người dùng khi sử dụng phương thức DangKy
+             user.ChatRoom = this;
+
+             Có thể gán thay trong lớp User trong khởi tạo nếu có nhiều PhongChat được triển khai ngoài NhomChat
+            */
+
             _users.Add(user);
         }
 
-        public  void RegisterMultiple(params IUser[] users)
+        public void DangKyNhieuUser(params User[] users)
         {
             foreach (var newUser in _users)
             {
-                Register(newUser);
+                DangKy(newUser);
             }
         }
 
-        public  void Send(string from, string message)
+        public void GuiNhanTin(string from, string message)
         {
             _users.ForEach(user => user.Notify(from, message));
         }

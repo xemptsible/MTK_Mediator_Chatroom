@@ -1,16 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MediatorPattern.Mediator
+namespace MediatorPattern
 {
-    // Triển khai lớp bê tông/cứng (Concrete class) với những phương pháp kế thừa từ lớp trừu tượng
-    public class User : IUser
+    // Lớp 
+    public abstract class User
     {
-        public User(string username) : base(username)
+        public string Username { get; }
+        public IPhongChat ChatRoom { get; set; }
+
+
+        //Gán phòng chat trong khởi tạo User
+
+        protected User(IPhongChat chatroom, string username)
         {
+            Username = username;
+            ChatRoom = chatroom;
+        }
+
+        public void GanChatRoom(IPhongChat chatRoom)
+        {
+            ChatRoom = chatRoom;
+        }
+
+        public void Send(string message)
+        {
+            ChatRoom.GuiNhanTin(Username, message);
+        }
+
+        public virtual void Notify(string from, string message)
+        {
+            Debug.WriteLine($"{Username} sent {message} from {ChatRoom}");
         }
     }
 }

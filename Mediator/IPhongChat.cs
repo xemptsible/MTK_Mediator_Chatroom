@@ -7,11 +7,13 @@ using System.Windows.Forms;
 
 namespace MediatorPattern
 {
-    // Triển khai mẫu Mediator với một interface
+    /*
+     * Triển khai mẫu Mediator với một interface
+     */
     public interface IPhongChat
     {
-        void Register(IUser user);
-        void RegisterMultiple(params IUser[] users);
-        void Send(string from, string message);
+        void DangKy(User user);
+        void DangKyNhieuUser(params User[] users);
+        void GuiNhanTin(string from, string message);
     }
 }
